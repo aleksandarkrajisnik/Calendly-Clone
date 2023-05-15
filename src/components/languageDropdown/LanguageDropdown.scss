@@ -1,0 +1,85 @@
+@import '../../assets/style/colors';
+
+.languageDropdownTrigger{
+    position:relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding:10px 0;
+    cursor: pointer;
+
+    svg{
+        color:$textDarkGray;
+        &.globe{
+            font-size: 20px;
+        }
+        &.arrow{
+            font-size: 22px;
+        }
+    }
+
+    span{
+        font-size: 13px;
+        font-weight: 600;
+        color: $blueGray;
+        margin:0 5px 0 10px;
+    }
+
+    &:hover{
+        svg,span{
+            color:$blue;
+        }
+        .languageBox{
+           span{
+            color:$textDarkGray !important;
+           }
+        }
+    }
+}
+
+.languageDropdown{
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top:40px;
+    right: 0;
+    width: 210px;
+    border:1px solid $borderGray;
+    border-radius: 3px;
+    animation: dropdownMenuHover 0.3s forwards;
+    
+    .languageBox{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:12px;
+        color:$textDarkGray;
+        font-size: 14px;
+
+        span{
+            font-weight: 300;
+            margin:0;
+        }
+
+        svg{
+            color:$blue;
+        }
+
+        &:hover{
+            background-color: $lightBlue;
+            span{
+               font-weight: 500;
+            }
+        }
+
+        &.active{
+            background-color: $lightBlue;
+            span{
+                font-weight: 500;
+            }
+        }
+
+        
+    }
+}

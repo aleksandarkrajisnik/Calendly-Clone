@@ -1,0 +1,189 @@
+@import '../../assets/style/colors';
+
+.customers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 147px;
+    .content{
+        width: 1250px;
+        padding: 0 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .heading{
+            margin-bottom: 72px;
+            h2{
+                max-width: 700px;
+                text-align: center;
+                color: $darkBlue;
+                font-weight: 600;
+                font-size: 35px;
+                letter-spacing: -0.3px;
+                white-space:normal;
+                span{
+                    color:$blue;
+                    font-size: 36px;
+                }
+            }
+        }
+
+        .customerBrandLogos{
+            width: 100%;
+            padding: 0 25px;
+            display: flex;
+            justify-content: space-between;
+            row-gap: 40px;
+
+
+            .brandLogo{
+                display: flex;
+                justify-content: center;
+            }
+
+            img{
+                height: 30px;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width:1240px) {
+    .customers{
+        .content{
+            .customerBrandLogos{
+                max-width: 1000px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .customers{
+        .content{
+            .heading{
+                h2{
+                    font-size: 38px;
+                    line-height: 56px;
+                    span{
+                        font-size: 38px;
+                    }
+                }
+            }
+
+            .customerBrandLogos{
+                display: grid;
+                grid-template-columns: repeat(8, 1fr);
+                max-width: 700px;
+                .ebay{
+                    grid-column: 1 / span 2;
+                }
+                .zenefits{
+                    grid-column: 3 / span 3;
+                }
+                .compass{
+                    grid-column: 6 / span 3;
+                }
+                .twilio{
+                    grid-column: 2 / span 3;
+                }
+                .dropbox{
+                    grid-column: 5 / span 2;
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .customers{
+        .content{
+
+            .customerBrandLogos{
+                
+                .ebay{
+                    grid-column: 1 / span 4;
+                }
+                .zenefits{
+                    grid-column: 5 / span 4;
+                }
+                .compass{
+                    grid-column: 1 / span 8;
+                }
+                .twilio{
+                    grid-column: 1 / span 4;
+                }
+                .dropbox{
+                    grid-column: 5 / span 4;
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .customers{
+        margin-top: 150px;
+        .content{
+            .heading{
+                h2{
+                    font-size: 26px;
+                    line-height: 40px;
+                    span{
+                        font-size: 26px;
+                    }
+                }
+            }
+
+            .customerBrandLogos{
+                
+                .ebay{
+                    grid-column: 1 / span 4;
+                }
+                .zenefits{
+                    grid-column: 5 / span 4;
+                }
+                .compass{
+                    grid-column: 1 / span 8;
+                }
+                .twilio{
+                    grid-column: 1 / span 8;
+                }
+                .dropbox{
+                    grid-column: 1 / span 8;
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    .customers{
+        .content{
+            .customerBrandLogos{
+                .ebay{
+                    grid-column: 1 / span 8;
+                }
+                .zenefits{
+                    grid-column: 1 / span 8;
+                }
+                .compass{
+                    grid-column: 1 / span 8;
+                }
+                .twilio{
+                    grid-column: 1 / span 8;
+                }
+                .dropbox{
+                    grid-column: 1 / span 8;
+                }
+                
+            }
+        }
+    }
+}

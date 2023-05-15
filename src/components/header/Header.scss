@@ -1,0 +1,15 @@
+@import '../../assets/style/colors';
+
+.header{
+    max-width: 100vw;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: 0.3s;
+    z-index: 150 !important;
+
+    &.animatedHeader{
+        top:-44px;
+        z-index: 150 !important;
+    }
+}

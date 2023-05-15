@@ -1,0 +1,251 @@
+@import '/src/assets/style/colors';
+
+.servicesSlides{
+    display: flex;
+    justify-content: center;
+    max-width: 1068px;
+    padding: 94px 40px 64px;
+    
+    .servicesSlidesContent{
+        .slide{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .slideText{
+                width: 49%;
+                padding-right: 40px;
+
+                .section{
+                    display: flex;
+                    align-items: flex-start;
+                    padding-bottom: 16px;
+
+                    .sectionIcon{
+                        margin-top: 3px;
+                        width: 24px;
+                    }
+                    
+                    .sectionText{
+                        margin-left: 20px;
+                        h4{
+                            font-size: 18.5px;
+                            font-weight: 600;
+                            color: $darkBlue;
+                        }
+                        p{
+                            font-size: 17px;
+                            font-weight: 400;
+                            color: $darkBlueGray;
+                            letter-spacing: -0.5px;
+                            line-height: 25px;
+                        }
+                    }   
+                }
+            }
+
+            .slideImage{
+                width: 51%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                img{
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1070px) {
+    .servicesSlides{
+        margin-top: 94px;
+    }
+}
+
+@media (max-width:990px) {
+    .servicesSlides{
+        margin-top: 30px;
+
+        .heightFixer{
+            min-height: 1000px;
+        }
+
+        .servicesSlidesContent{
+            position: fixed;
+            display: flex;
+            gap: 30px;     
+            transition:0.3s;       
+
+
+            &.sales{
+                left: calc(-30vw + 30px);
+            }
+            &.marketing{
+                left: calc(-90vw)
+            }
+            &.customerSuccess{
+                left: calc(-150vw - 30px);
+            }
+             &.recruiting{
+                left: calc(-210vw - 60px);
+            }
+            &.informationTechnology{
+                left: calc(-270vw - 90px);
+            }
+            &.education{
+                left: calc(-330vw - 120px);
+            }
+            .slide{
+                flex-direction:column-reverse;
+                width: 60vw;
+                height: fit-content;
+                padding: 40px;
+                border: 1px solid $borderGray;
+                box-shadow: 0px 5px 5px rgb(232, 232, 232);
+                border-radius: 15px;
+
+                .slideText{
+                    width: 100%;
+                    padding-right: 20px;
+                }
+
+                .slideImage{
+                    width: 90%;
+                    margin-bottom: 50px;
+                    img{
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:770px) {
+    .servicesSlides{
+        .servicesSlidesContent{
+            &.sales{
+                left: calc(-42.5vw + 40px)
+            }
+            &.marketing{
+                left: calc(-42.5vw - 85vw  + 10px);
+            }
+            &.customerSuccess{
+                left: calc(-42.5vw - 85vw - 85vw - 20px);
+            }
+             &.recruiting{
+                left: calc(-42.5vw - 85vw - 85vw - 85vw - 50px);
+            }
+            &.informationTechnology{
+                left: calc(-42.5vw - 85vw - 85vw - 85vw - 85vw - 80px);
+            }
+            &.education{
+                left: calc(-42.5vw - 85vw - 85vw - 85vw - 85vw - 85vw - 110px);
+            }
+
+            .slide{
+                width: 85vw;
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .servicesSlides{
+        .heightFixer{
+            &.salesSlide{
+                min-height: 870px;
+            }
+            &.marketingSlide{
+                min-height: 765px;
+            }
+            &.customerSuccessSlide{
+                min-height: 940px;
+            }
+            &.recruitingSlide{
+                min-height: 840px;
+            }
+            &.informationTechnologySlide{
+                min-height: 970px;
+            }
+            &.educationSlide{
+                min-height: 995px;
+            }
+        }
+        .servicesSlidesContent{
+            .slide{
+                .slideText{
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:420px){
+    .servicesSlides{
+        .heightFixer{
+            &.salesSlide{
+                min-height: 940px;
+            }
+            &.marketingSlide{
+                min-height: 800px;
+            }
+            &.customerSuccessSlide{
+                min-height: 1000px;
+            }
+            &.recruitingSlide{
+                min-height: 810px;
+            }
+            &.informationTechnologySlide{
+                min-height: 970px;
+            }
+            &.educationSlide{
+                min-height: 1070px;
+            }
+        }
+    }
+}
+
+@media (max-width:385px){
+    .servicesSlides{
+        .heightFixer{
+            &.salesSlide{
+                min-height: 960px;
+            }
+            &.marketingSlide{
+                min-height: 820px;
+            }
+            &.customerSuccessSlide{
+                min-height: 1040px;
+            }
+            &.recruitingSlide{
+                min-height: 850px;
+            }
+            &.informationTechnologySlide{
+                min-height: 1040px;
+            }
+            &.educationSlide{
+                min-height: 1120px;
+            }
+        }
+    }
+}
+
+@media (max-width:375px){
+    .servicesSlides{
+        .heightFixer{
+            &.salesSlide{
+                min-height: 990px;
+            }
+            &.informationTechnologySlide{
+                min-height: 1100px;
+            }
+            &.educationSlide{
+                min-height: 1220px;
+            }
+        }
+    }
+}

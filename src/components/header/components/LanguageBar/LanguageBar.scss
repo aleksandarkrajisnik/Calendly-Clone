@@ -1,0 +1,37 @@
+@import '../../../../assets/style/colors';
+
+.languageBar{
+    width: 100%;
+    position: relative;
+    z-index: 101;
+    background-color: $lightBlue;
+    display: flex;
+    justify-content: center;
+
+    .languageBarContent{
+        width: 1250px;
+        padding:0px 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@keyframes languageBar {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes dropdownMenuHover {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

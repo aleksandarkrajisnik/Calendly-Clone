@@ -1,0 +1,94 @@
+@import '../../assets/style/colors';
+
+.security{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:60px 0;
+
+    .content{
+        max-width: 1250px;
+        display: flex;
+
+        .securityImage{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            img{
+                max-width:595px;
+                max-height:483px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .securityText{
+            width: 50%;
+            color:$darkBlue;
+            padding-left: 112px;
+            padding-right: 60px;
+
+            h1{
+                font-weight: 600;
+                font-size: 36px;
+                margin-bottom: 48px;
+            }
+
+            .textSection{
+                display: flex;
+                margin-top: 20px;
+
+                svg {
+                   color:$blue;
+                   margin-right: 18px;
+                   width: 40px;
+                   height: 30px;
+                }
+
+                h3 {
+                    font-weight: 600;
+                }
+
+                p {
+                    color:$textDarkGray;
+                    font-size: 17px;
+                    line-height: 25px;
+                    letter-spacing: -0.5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:990px) {
+    .security{
+        .content{
+            flex-direction: column-reverse;
+
+            .securityImage{
+                width: 100%;
+                justify-content: center;
+                margin-top: 50px;
+
+                img{
+                    max-width: 450px;
+                }
+            }
+
+            .securityText{
+                padding:0 25px;
+                width: 100%;
+
+                .textSection{
+                    svg{
+                        min-width: 30px;
+                        min-height: 22.5px;
+                        width: 30px;
+                        height: 22.5px;
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+    }
+}

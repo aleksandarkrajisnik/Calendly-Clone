@@ -1,0 +1,118 @@
+@import '../../assets/style/colors';
+
+.integrations{
+    width: 100%;
+    padding:60px 0;
+    background-image: url('../../assets/images/backgrounds/integrations-background.svg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    .content{
+        max-width: 1250px;
+        padding: 0 25px;
+        display: flex;
+
+        .integrationsText{
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            justify-content: center;
+            flex-direction: column;
+            padding-right: 152px;
+            color: $darkBlue;
+            
+            h1{
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 60px;
+            }
+
+            p{
+                margin: 40px 0;
+                font-size: 16px;
+            }
+        }
+
+        .integrationsImage{
+            display: flex;
+            width: 50%;
+            justify-content: flex-start;
+            align-items: center;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:1600px) {
+    .integrations{
+        background-position-x: -140px;
+    }
+}
+
+@media (max-width:1320px) {
+    .integrations{
+        background-position-x: -260px;
+    }
+}
+
+@media (max-width:1000px) {
+    .integrations{
+        background-position-x:1500px;
+        .content{
+            flex-direction: column;
+            align-items: center;
+
+            .integrationsText{
+                width: 100vw;
+                justify-content: flex-start;
+                padding:0 25px;
+
+                h1{
+                    font-size: 35px;
+                }
+
+                p{
+                    margin:25px 0 35px 0;
+                }
+            }
+
+            .integrationsImage{
+                width: 100%;
+                justify-content: center;
+
+                img{
+                    max-width: 450px;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .integrations{
+        .content{
+            .integrationsText{
+                .button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .integrations{
+        .content{
+            .integrationsImage{
+                img{
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,180 @@
+@import '../../assets/style/colors';
+
+.hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content{
+        width: 1250px;
+        padding: 90px 45px 0 45px;
+        display: flex;
+        justify-content: space-between;
+
+        .heroText{
+            width: 46%;
+            padding-right: 80px;
+
+            h1{
+                color: $darkBlue;
+                font-size: 60px;
+                font-weight: 600;
+                line-height: 80px;
+                margin-bottom: 30px;
+                span{
+                    color: $blue;
+                }
+            }
+
+            p{
+                font-weight: 300;
+                font-size: 18px;
+                color:$blueGray;
+                padding-bottom: 30px;
+            }
+
+            .signUpContainer{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                input{
+                    padding:0 32px;
+                    width: 74%;
+                    height: 53px;
+                    border-radius: 4px;
+                    font-weight: 400;
+                    background-color: white;
+                    border:1px solid $textDarkGray;
+                    font-size: 16px;      
+                    
+                    &::placeholder{
+                        color:$textGray;
+                    }
+
+                    &:focus{
+                        border: 1px solid $blue;
+                        outline: none;
+                    }
+                }
+            }
+
+            .signUpLabel{
+                color:$blueGray;
+                font-weight: 300;
+                font-size: 15px;
+            }
+        }
+
+        .heroImage{
+            width: 54%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img{
+                width: 100%;
+                position: relative;
+                animation: heroImageOpacity 1s forwards;
+            }
+        }
+    }
+}
+
+@keyframes heroImageOpacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .hero{
+        .content{
+            padding:70px 25px 0 25px;
+            flex-direction: column;
+
+            .heroText{
+                width: 100%;
+                padding: 0px 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h1{
+                    font-size: 45px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    line-height: 55px;
+                }
+
+                p{
+                    text-align: center;
+                }
+
+                .signUpContainer{
+                    width: 70%;
+                }
+            }
+
+            .heroImage{
+                margin-top: 60px;
+                width: 100%;
+                
+                img{
+                    max-width: 600px;
+                }
+            }
+    
+        }
+    }
+}
+
+@media screen and (max-width:680px) {
+    .hero{
+        .content{
+            .heroText{
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:510px) {
+    .hero{
+        .content{
+            .heroText{
+                align-items: flex-start;
+                h1{
+                    font-size: 34px;
+                    text-align: left;
+                }
+
+                p{
+                    font-size: 16px;
+                    text-align: left;
+                }
+
+                .signUpContainer{
+                    width: 95%;
+                    flex-direction: column;
+
+                    input{
+                        width: 100%;
+                    }
+
+                    .button{
+                        width: 100% !important;
+                        height: 64px !important;
+                        margin-top: 20px;
+                    }
+
+                }
+            }
+        }
+    }
+}

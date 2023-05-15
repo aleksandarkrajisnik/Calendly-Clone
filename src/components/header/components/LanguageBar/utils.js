@@ -1,0 +1,1 @@
+export const languageDropdownList = ['English', 'French', 'Spanish', 'German', 'Portugese'];

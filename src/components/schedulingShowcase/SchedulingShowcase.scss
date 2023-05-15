@@ -1,0 +1,222 @@
+@import '../../assets/style/colors';
+
+.schedulingShowcase{
+    margin: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .content{
+        width: 1250px;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h1{
+            text-align: center;
+            color: $darkBlue;
+            font-weight: 600;
+            max-width: 750px;
+            font-size: 35px;
+            margin-bottom: 96px;
+        }
+
+        .showcase{
+            display: flex;
+            justify-content: space-between;
+
+            .imageContainer{
+                width: 70%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                img{
+                    width: 80%;
+                }
+            }
+            
+            .showcaseTitles{
+                width: 30%;
+                padding: 10px 0px 10px 20px;
+                position: relative;
+                .loadingBar{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 5px;
+                    border-radius: 3px;
+                    background-color: $loaderGray;
+                    display: flex;
+                    justify-content: center;
+        
+                    .loadingBarInner{
+                        transition: 0.3s;
+                        height: 100%;
+                        border-radius: 3px;
+                        background-color: $blue;
+                    }
+                }
+                
+                .title{
+                    font-size: 26px;
+                    color:$loaderGray;
+                    font-weight: 600;
+                    padding: 15px;
+                    transition: 0.2s;
+                    border-radius: 10px;
+                    margin-bottom: 35px;
+                    text-align: left;
+                    user-select: none;
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+
+                    &:hover{
+                        background-color: $lightBlue;
+                        color: $darkBlue;
+                        cursor: pointer;
+                    }
+
+                    &.active{
+                        transition: 0.2s;
+                        color: $darkBlue;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width:1250px) {
+    .schedulingShowcase{
+        .content{
+            .showcase{
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+                max-width: 770px;
+
+                .imageContainer{
+                    max-width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img{
+                        margin-top: 30px;
+                        width: 100%;
+                    }
+                }
+
+                .showcaseTitles{
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .title{
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:800px){
+    .schedulingShowcase{
+        .content{
+            h1{
+                margin-bottom: 40px;
+            }
+            .showcase{
+                display: flex;
+                flex-direction: column;
+
+                .mobileShowcaseSection{
+                    margin-top: 30px;
+                    padding: 0 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &.active{
+                        h2{
+                            transition: 0.2s;
+                            color: $darkBlue;
+                        }
+                    }
+
+                    h2,img{
+                        padding: 10px;
+                        border-radius: 10px;
+                    }
+
+                    h2{
+                        color: $loaderGray;
+                        font-weight: 600;
+                        font-size: 26px;
+                        padding: 10px;
+                        text-align: center;
+                    }
+
+                    img{
+                        max-width: 420px;
+                        margin-top:20px;
+                        
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+                        h2{
+                            color:$darkBlue;
+                            background-color: $lightBlue;
+                        }
+                        img{
+                            background-color: $lightBlue;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:480px){
+    .schedulingShowcase{
+        .content{
+            h1{
+                max-width: 90vw;
+            }
+            .showcase{
+                .mobileShowcaseSection{
+
+                    h2{
+                        font-size: 20px;
+                    }
+
+                    img{
+                        margin-top: 0;
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes loadingBar {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}

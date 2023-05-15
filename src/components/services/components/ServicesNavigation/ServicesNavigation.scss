@@ -1,0 +1,195 @@
+@import '../../../../assets/style/colors';
+
+.servicesNavigation{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .servicesNavigationContent{
+        display: flex;
+
+        .tab{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 14px 32px;
+            border-bottom: 3.5px solid #E7EDF6;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $lightBlue;
+                h4{
+                    color: $darkBlue;
+                }
+            }
+
+            &.active{
+                border-bottom: 3.5px solid $blue;
+
+                svg{
+                    path{
+                        stroke:$blue;
+                    }
+                }
+
+                h4{
+                    color:$blue;
+                }
+                
+            }
+
+            svg{
+                height: 28px;
+                width: 28px;
+                margin-bottom: 10px;
+                path{
+                    stroke:$blueGray;
+                }
+            }
+
+            h4{
+                transition: 0.3s;
+                color:$blueGray;
+                font-size: 17px;
+                font-weight: 600;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media (max-width:1070px) {
+    .servicesNavigation{
+        &::before{
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            height: 100px;
+            width: 80px;
+            background:linear-gradient(to right,white,white,white);
+            filter:blur(5px);
+            z-index: 100 !important;
+            
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            left: calc(100vw - 60px);
+            top: 0;
+            height: 100px;
+            width: 80px;
+            background:linear-gradient(to right,white,white,white);
+            filter:blur(5px);
+            z-index: 100 !important;
+        }
+        .servicesNavigationContent{
+            transition: 0.3s;
+            position:absolute;
+            left: 50px;
+            top:0;
+            
+            &.recruiting{
+                left: -70px;
+            }
+
+            &.informationTechnology, &.education{
+                left: -100px;
+            }
+        }
+    }
+}
+
+@media (max-width:990px) {
+    .servicesNavigation{
+        .servicesNavigationContent{
+            &.sales{
+                left: calc(50vw - 56px);
+            }
+            &.marketing{
+                left: calc(50vw - 190px);
+            }
+            &.customerSuccess{
+                left: calc(50vw - 380px);
+            }
+             &.recruiting{
+                left: calc(53vw - 595px);
+            }
+            &.informationTechnology{
+                left: calc(53vw - 810px);
+            }
+            &.education{
+                left: calc(53vw - 1025px);
+            }
+        }
+    }
+}
+
+@media (max-width:700px){
+    .servicesNavigation{
+        .servicesNavigationContent{
+            
+            &.sales{
+                left: calc(50vw - 56px);
+            }
+            &.marketing{
+                left: calc(50vw - 190px);
+            }
+            &.customerSuccess{
+                left: calc(50vw - 380px);
+            }
+             &.recruiting{
+                left: calc(55vw - 595px);
+            }
+            &.informationTechnology{
+                left: calc(55vw - 810px);
+            }
+            &.education{
+                left: calc(57vw - 1025px);
+            }
+        }
+    }
+}
+
+@media (max-width:550px){
+    .servicesNavigation{
+        &::before{
+            left:-50px;
+            display: none;
+        }
+        &::after{
+            left: calc(100vw - 30px);
+            display: none;
+        }
+    }
+}
+
+@media (max-width:440px){
+    .servicesNavigation{
+        .servicesNavigationContent{
+            
+            &.sales{
+                left: calc(50vw - 56px);
+            }
+            &.marketing{
+                left: calc(52vw - 190px);
+            }
+            &.customerSuccess{
+                left: calc(52vw - 380px);
+            }
+             &.recruiting{
+                left: calc(58vw - 598px);
+            }
+            &.informationTechnology{
+                left: calc(58vw - 805px);
+            }
+            &.education{
+                left: calc(60vw - 1025px);
+            }
+        }
+    }
+}
